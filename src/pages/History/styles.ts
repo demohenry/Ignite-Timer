@@ -1,7 +1,7 @@
-import { styled, css } from 'styled-components';
+import { styled, css } from 'styled-components'
 
 export const HistoryContainer = styled.main`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     flex: 1;
     padding: 3.5rem;
 
@@ -16,11 +16,11 @@ export const HistoryContainer = styled.main`
 `
 
 export const HistoryList = styled.div`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     flex: 1;
     overflow: auto;
     margin-top: 2rem;
-    
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -62,12 +62,12 @@ export const HistoryList = styled.div`
         }
       }
     }
-`}
+  `}
 `
 const STATUS_COLORS = {
   yellow: 'yellow-500',
   green: 'green-500',
-  red: 'red-500'
+  red: 'red-500',
 } as const
 
 interface StatusProps {
@@ -75,19 +75,18 @@ interface StatusProps {
 }
 
 export const Status = styled.span<StatusProps>`
-${({statusColor, theme }) => css `
+  ${({ statusColor, theme }) => css`
     display: flex;
     align-items: center;
     gap: 0.5rem;
 
-
     &:before {
-      content:'';
+      content: '';
       width: 0.5rem;
-      height:0.5rem;
+      height: 0.5rem;
       border-radius: 50%;
 
       background: ${theme[STATUS_COLORS[statusColor]]};
     }
-`}
+  `}
 `
