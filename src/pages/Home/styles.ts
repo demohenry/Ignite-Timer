@@ -1,21 +1,19 @@
 import styled, { css } from 'styled-components'
 
 export const HomeContainer = styled.main`
-  ${({ theme }) => css`
-    flex: 1;
+  flex: 1;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 3.5rem;
-    }
-  `}
+    gap: 3.5rem;
+  }
 `
 export const FormContainer = styled.div`
   ${({ theme }) => css`
@@ -96,7 +94,7 @@ const BaseCountdownButton = styled.button`
     border: 0;
     padding: 1rem;
     border-radius: 8px;
-    color: ${(props) => props.theme['gray-100']};
+    color: ${theme['gray-100']};
 
     display: flex;
     align-items: center;
